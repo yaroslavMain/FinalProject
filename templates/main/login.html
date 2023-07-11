@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+LOGIN
+{% endblock %}
+
+{% block content %}
+
+<!-- Start Header/Navigation -->
+{% include 'main/components/header-nav.html' %}
+<!-- End Header/Navigation -->
+
+<!-- Start Hero Section -->
+{% include 'main/components/sections/hero.html' %}
+<!-- End Hero Section -->
+
+<!-- Start Form Login -->
+{% include 'main/components/form-login.html' %}
+<!-- End Form Login -->
+
+<!-- Start Footer Section -->
+{% include 'main/components/footer.html' %}
+<!-- End Footer Section -->
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<!-- Script Login -->
+<script type="application/javascript" src="{{ url_for('static', path='shop/assets/js/login.js') }}"></script>
+<!-- End Script Login -->
+
+{% endblock %}

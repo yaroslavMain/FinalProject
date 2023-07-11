@@ -1,0 +1,30 @@
+<h5>{{ article.date_publish }}</h5>
+<h1 style="
+color: black;
+text-align: center;
+">{{ article.name }}</h1>
+
+<img src="{{ url_for('media', path='/') }}{{ article.image }}" style="width: 100%;" alt="">
+
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p style="color: black; font-size: 26px;">{{ article.description }}</p>
+            </div>
+        </div>
+
+
+        <h1>Комментарии</h1>
+        <div id="comments">
+            {% for comment in comments %}
+                <ul><li>{{ comment }} : {{ comment.date_created }}</li></ul>
+            {% endfor %}
+        </div>
+
+        <form id="form">
+            <input id="inputcomment" type="text" placeholder="Введите комментарий">
+            <button name="{{ article.id }}" id="btn" class="btn btn-comment" type="submit">Опубликовать</button>
+        </form>
+    </div>
+</article>

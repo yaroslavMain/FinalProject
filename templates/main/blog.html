@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+BLOG
+{% endblock %}
+
+{% block content %}
+
+<!-- Start Header/Navigation -->
+{% include 'main/components/header-nav.html' %}
+<!-- End Header/Navigation -->
+
+<!-- Start Hero Section -->
+{% include 'main/components/sections/hero.html' %}
+<!-- End Hero Section -->
+
+<!-- Start Blog Section -->
+{% include 'main/components/sections/blog.html' %}
+<!-- End Blog Section -->
+
+<!-- Start Testimonial Slider -->
+{% include 'main/components/slider.html' %}
+<!-- End Testimonial Slider -->
+
+<!-- Start Footer Section -->
+{% include 'main/components/footer.html' %}
+<!-- End Footer Section -->
+
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<!-- Start Blog JS -->
+<script src="{{ url_for('static', path='/shop/assets/js/blog.js') }}"></script>
+<!-- End Blog JS -->
+
+{% endblock %}

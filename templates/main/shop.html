@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+SHOP
+{% endblock %}
+
+{% block content %}
+
+<!-- Start Header/Navigation -->
+{% include 'main/components/header-nav.html' %}
+<!-- End Header/Navigation -->
+
+<!-- Start Hero Section -->
+{% include 'main/components/sections/hero.html' %}
+<!-- End Hero Section -->
+
+<!-- Start Shop Section-->
+{% include 'main/components/sections/shop-content.html' %}
+<!-- End Shop -->
+
+<!-- Start Footer Section -->
+{% include 'main/components/footer.html' %}
+<!-- End Footer Section -->
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<!-- Start Shop JS -->
+<script src="{{ url_for('static', path='/shop/assets/js/shop.js') }}"></script>
+<!-- End Shop JS -->
+
+{% endblock %}

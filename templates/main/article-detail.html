@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ article.name }}
+{% endblock %}
+
+{% block content %}
+
+<!-- Start Header/Navigation -->
+{% include 'main/components/header-nav.html' %}
+<!-- End Header/Navigation -->
+
+<!-- Start Post Section -->
+{% include 'main/components/post-detail.html' %}
+<!-- End Post Post Section -->
+
+{% endblock %}
+
+{% block scripts %}
+
+<!-- Start Article Detail JS -->
+<script src="{{ url_for('static', path='/shop/assets/js/article-detail.js') }}"></script>
+<!-- End Article Detail JS -->
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+MAIN PAGE
+{% endblock %}
+
+{% block content %}
+
+<!-- Start Header/Navigation -->
+{% include 'main/components/header-nav.html' %}
+<!-- End Header/Navigation -->
+
+<!-- Start Hero Section -->
+{% include 'main/components/sections/hero.html' %}
+<!-- End Hero Section -->
+
+<!-- Start Product Section -->
+{% include 'main/components/sections/why-you-choose-us-products.html' %}
+<!-- End Product Section -->
+
+<!-- Start Why Choose Us Section -->
+{% include 'main/components/sections/choose-us.html' %}
+<!-- End Why Choose Us Section -->
+
+<!-- Start We Help Section -->
+{% include 'main/components/sections/help.html' %}
+<!-- End We Help Section -->
+
+<!-- Start Testimonial Slider -->
+{% include 'main/components/slider.html' %}
+<!-- End Testimonial Slider -->
+
+<!-- Start Footer Section -->
+{% include 'main/components/footer.html' %}
+<!-- End Footer Section -->
+
+
+{% endblock %}

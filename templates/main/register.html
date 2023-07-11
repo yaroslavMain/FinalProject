@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+REGISTER
+{% endblock %}
+
+{% block content %}
+
+<!-- Start Header/Navigation -->
+{% include 'main/components/header-nav.html' %}
+<!-- End Header/Navigation -->
+
+<!-- Start Hero Section -->
+{% include 'main/components/sections/hero.html' %}
+<!-- End Hero Section -->
+
+<!-- Start Form Register -->
+{% include 'main/components/form-register.html' %}
+<!-- End Form Register -->
+
+<!-- Start Footer Section -->
+{% include 'main/components/footer.html' %}
+<!-- End Footer Section -->
+
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<!-- Script Register -->
+<script type="application/javascript" src="{{ url_for('static', path='shop/assets/js/register.js') }}"></script>
+<!-- End Script Register -->
+
+{% endblock %}

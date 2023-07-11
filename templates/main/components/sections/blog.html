@@ -1,0 +1,53 @@
+<div class="blog-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 order-2 order-lg-1 pt-5 pt-lg-0">
+                <a style="margin-bottom: 30px;" class="btn btn-custom-size xl-size btn-pronia-primary" id="clear">Clear Filters</a>
+                <div class="sidebar-area">
+                   <div class="widgets-searchbox" style="background-color: #f6f7fb; border-radius: 10px; position: relative; margin-bottom: 40px; padding: 30px;">
+                        <form id="search">
+                            <input class="input-field" type="text" id="q" placeholder="Search" style="border: 1px solid #dee2e6; background-color: #f6f7fb; border-radius: 10px; width: 100%; height: 45px; line-height: 45px; padding-left: 15px; padding-right: 55px; color: #000000;">
+                            <button class="widgets-searchbox-btn" type="submit" style="background-color: transparent; border: 0; position: absolute; top: 50%; right: 20px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); padding-left: 20px; padding-right: 20px; color: #cfcfcf;">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                   </div>
+                </div>
+                <div class="widgets-area" style="
+                    background-color: #f6f7fb;
+                    border-radius: 10px;
+                    padding-top: 55px;
+                    padding-bottom: 60px;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                ">
+                    <div class="widgets-item pt-0">
+                        <h2 class="widgets-title mb-4" style="
+                            padding-bottom: 15px;
+                            text-align: center;
+                            position: relative;
+                            color: #6c6c6c;
+                            font-size: 24px;
+                        ">Categories</h2>
+
+                        <ul class="widgets-category">
+                            <li style="padding-bottom: 10px; margin-bottom: 10px;">
+                                <a class="nav-item" href="#" id="0" style="text-decoration: none;">
+                                    All
+                                </a>
+                            </li>
+                            {% for category in categories %}
+                                <li style="padding-bottom: 10px; margin-bottom: 10px;">
+                                    <a href="#" class="nav-item" id="{{ category.id }}" style="text-decoration: none;">
+                                        {{ category.name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-8 order-1 order-lg-2" id="blog-content" style="display: flex; flex-wrap: wrap;"></div>
+        </div>
+    </div>
+</div>
