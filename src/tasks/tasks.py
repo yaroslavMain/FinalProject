@@ -4,8 +4,6 @@ import smtplib
 
 from src.celery import celery, SETTINGS
 
-# iaroslavtulyakov@yandex.ru
-# xsslhoyveqfkoott
 @celery.task
 def send_message(payload: str, to: str):
     msg = MIMEMultipart()
