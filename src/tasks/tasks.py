@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 import smtplib
 
 from src.celery import celery, SETTINGS
-#
+
 @celery.task
 def send_message(payload: str, to: str):
     msg = MIMEMultipart()
